@@ -7,9 +7,9 @@ install:
       - sudo pip install codecov
 
 script:
-    - make -C make
-    - make -C make test
-    - make -C make gcov
+    - make
+    - make test
+    - make gcov
 branches:
       only:
           - master
