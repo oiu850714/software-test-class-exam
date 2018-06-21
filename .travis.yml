@@ -3,6 +3,9 @@ compiler:
     - g++
 os:
     - linux
+install:
+      - sudo pip install codecov
+
 script:
     - make -C make
     - make -C make test
@@ -10,3 +13,6 @@ script:
 branches:
       only:
           - master
+
+after_success:
+      - codecov -t 21f859b5-c979-4f55-ba38-9ad319b493a6 -X gcov # $$$$$ is your private token
